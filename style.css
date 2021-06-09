@@ -1,0 +1,48 @@
+*{
+    box-sizing: border-box;
+}
+
+.loading {
+    width: 200px;
+    height: 50px;
+    margin: 20px auto;
+    position: relative;
+}
+.loading span {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    height: 5px;
+    width: 9px;
+    background-color: #f0f;
+    animation: waving 1.5s infinite ease-out;
+}
+.loading span:nth-child(2){
+    left: 11px;
+    animation-delay: .2s;
+}
+.loading span:nth-child(3){
+    left: 22px;
+    animation-delay: .4s;
+}
+.loading span:nth-child(4){
+    left: 33px;
+    animation-delay: .6s;
+}
+.loading span:last-child{
+    left: 44px;
+    animation-delay: .8s;
+}
+
+@keyframes waving {
+    0%, 50%, 100% {
+        height:5px;
+        transform: translateY(0);
+        background-color: #f0f;
+    }
+    25% {
+        height:30px;
+        transform: translateY(15px);
+        background-color: #000;
+    }
+}
